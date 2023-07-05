@@ -1,5 +1,5 @@
 # fronius-pvo-stats
-docker container that exports data from fronius gen24 to pvo 
+docker container that exports data from a fronius gen24 inverter to https://pvoutput.org
 
 ```
 superd/fronius-pvo-stats:latest
