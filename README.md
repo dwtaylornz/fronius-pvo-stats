@@ -7,7 +7,7 @@ docker pull superd/fronius-pvo-stats:latest
 
 # how to use 
 1.  set the following docker variables; 
-* dataManagerIP (fronius ip) 
+* froniusIP (fronius ip) 
 * pvOutputApiKEY (pvo api key)
 * pvOutputSID (pvo SID)
 * delay (optional delay override in mins, defaults to 2min)
@@ -16,7 +16,7 @@ docker pull superd/fronius-pvo-stats:latest
 
 ## example
 ```
-docker create --name='fronius-stats' --net='bridge' -e 'dataManagerIP'='192.168.32.142' -e 'pvOutputApiKEY'='909e223c7feef0e841234598d69e993' -e 'pvOutputSID'='12345' 'superd/fronius-pvo-stats'
+docker create --name='fronius-stats' --net='bridge' -e TZ="Pacific/Auckland" -e 'dataManagerIP'='192.168.32.142' -e 'pvOutputApiKEY'='909e223c7feef0e841234598d69e993' -e 'pvOutputSID'='12345' 'superd/fronius-pvo-stats'
 ```
 
 # built off and thanks to 
