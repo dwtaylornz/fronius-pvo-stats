@@ -2,7 +2,7 @@
 docker container that exports data from a fronius gen24 inverter to https://pvoutput.org
 
 ```
-superd/fronius-pvo-stats:latest
+docker pull superd/fronius-pvo-stats:latest
 ```
 
 # how to use 
