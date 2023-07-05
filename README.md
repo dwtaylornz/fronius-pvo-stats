@@ -13,8 +13,9 @@ docker pull superd/fronius-pvo-stats:latest
 * delay (optional delay override in mins, defaults to 2min)
 
 2.  run container
+* remember to set TZ for timezone
 
 ## example
 ```
-docker create --name='fronius-stats' --net='bridge' -e TZ="Pacific/Auckland" -e 'dataManagerIP'='192.168.32.142' -e 'pvOutputApiKEY'='909e223c7feef0e841234598d69e993' -e 'pvOutputSID'='12345' 'superd/fronius-pvo-stats'
+docker run --name='fronius-stats' --net='bridge' -e TZ="Pacific/Auckland" -e 'dataManagerIP'='192.168.32.142' -e 'pvOutputApiKEY'='909e223c7feef0e841234598d69e993' -e 'pvOutputSID'='12345' 'superd/fronius-pvo-stats'
 ```
