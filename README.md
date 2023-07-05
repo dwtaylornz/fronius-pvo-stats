@@ -17,5 +17,5 @@ docker pull superd/fronius-pvo-stats:latest
 
 ## example
 ```
-docker run --name='fronius-stats' --net='bridge' -e TZ="Pacific/Auckland" -e 'dataManagerIP'='192.168.32.142' -e 'pvOutputApiKEY'='909e223c7feef0e841234598d69e993' -e 'pvOutputSID'='12345' 'superd/fronius-pvo-stats'
+docker run --name='fronius-pvo-stats' --net='bridge' -e TZ="Pacific/Auckland" -e 'dataManagerIP'='192.168.32.142' -e 'pvOutputApiKEY'='909e223c7feef0e841234598d69e993' -e 'pvOutputSID'='12345' 'superd/fronius-pvo-stats'
 ```
