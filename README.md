@@ -5,13 +5,14 @@ docker container that exports data from fronius gen24 to pvo
 superd/fronius-pvo-stats:latest
 ```
 
-# use
-set the following docker variables 
-- dataManagerIP (fronius ip) 
-- pvOutputApiKEY (pvo api key)
-- pvOutputSID (pvo SID)
-- delay (optional delay override, defaults to 2 (mins))
-run container
+# how to use 
+1.  set the following docker variables; 
+* dataManagerIP (fronius ip) 
+* pvOutputApiKEY (pvo api key)
+* pvOutputSID (pvo SID)
+* delay (optional delay override in mins, defaults to 2min)
+
+2.  run container
 
 ## example
 ```
