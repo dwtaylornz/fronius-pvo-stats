@@ -6,13 +6,12 @@ docker pull superd/fronius-pvo-stats:latest
 ```
 
 # how to use 
-1.  set the following docker variables; 
+#### set the following docker variables; 
 * froniusIP (fronius ip) 
 * pvOutputApiKEY (pvo api key)
 * pvOutputSID (pvo SID)
 * delay (optional delay override in mins, defaults to 2min)
-
-2.  run container
+#### run container
 * remember to set TZ for timezone
 
 ## example
