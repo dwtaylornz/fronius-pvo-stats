@@ -14,12 +14,13 @@ if [ -z "$froniusIP" ]; then
     exit 1
 fi
 if [ -z "$delay" ]; then
-    delay=120
+    delay=2
 fi
 
 pvOutputApiURL="https://pvoutput.org/service/r2/addstatus.jsp"
 inverterDataURL="http://$froniusIP/solar_api/v1/GetInverterRealtimeData.cgi?Scope=Device&DeviceID=1&DataCollection=CommonInverterData"
 meterDataURL="http://$froniusIP/solar_api/v1/GetMeterRealtimeData.cgi?Scope=Device&DeviceId=0"
+delayMinutes=$((delay*60))
 
 # main loop
 while true; do
@@ -40,5 +41,5 @@ while true; do
     curl -s -d "d=$d_value" -d "t=$t_value" -d "v2=$v2_value" -d "v4=$v4_value" -d "v6=$v6_value" -H "X-Pvoutput-Apikey: $pvOutputApiKEY" -H "X-Pvoutput-SystemId: $pvOutputSID" "$pvOutputApiURL" 
     echo ""
 
-    sleep "$delay"
+    sleep "$delayMinutes"
 done
