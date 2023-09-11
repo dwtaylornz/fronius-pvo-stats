@@ -5,10 +5,12 @@ on:
     branches: [ "main" ]
     paths:
       - Dockerfile
+      - init.sh
   pull_request:
     branches: [ "main" ]
     paths:
       - Dockerfile
+      - init.sh
 
 jobs:
 
