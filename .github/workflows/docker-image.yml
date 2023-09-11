@@ -14,5 +14,11 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+    - name: Build and publish the Docker image on dockerhub
+      env: # Or as an environment variable
+        dockerhub_token: ${{ secrets.dockerhub_token }}
+      run: |
+        echo "$dockerhub_token" | docker login --username superd --password-stdin
+        docker build -t superd/fronius-pvo-stats . 
+        docker push superd/fronius-pvo-stats
+        
