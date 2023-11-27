@@ -21,4 +21,7 @@ docker run --name='fronius-pvo-stats' -e TZ="Pacific/Auckland" -e 'dataManagerIP
 pvoutput.org api spec - https://pvoutput.org/help/api_specification.html#id2
 > Power and energy values can be derived from one another. When a system sends only power values v2 and v4 the corresponding energy values are automatically calculated.
 
+
+
+<a href="https://www.buymeacoffee.com/dwtaylornz" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a> 
 [![Docker Image CI](https://github.com/dwtaylornz/fronius-pvo-stats/actions/workflows/docker-image.yml/badge.svg)](https://github.com/dwtaylornz/fronius-pvo-stats/actions/workflows/docker-image.yml)
